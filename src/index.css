@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body{
   background: #202020 ;
   color: white;
@@ -16,11 +20,52 @@ textarea {
 }
 
 .slide img{
-  height: 43rem;
+  height: 22rem;
+  object-fit: cover;
+}
+
+@media (min-width: 640px) {
+  .slide img {
+    height: 32rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .slide img {
+    height: 43rem;
+  }
 }
 
 .control-arrow{
   z-index: 1;
+}
+
+/* Feature card hover */
+.feature-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Menu item hover */
+.menu-item {
+  transition: box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+  box-shadow: 0 0 28px rgba(249, 115, 22, 0.18);
+}
+
+/* Gallery item hover */
+.gallery-item {
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.02);
 }
 
 .h1-slider{
