@@ -20,7 +20,8 @@ textarea {
 }
 
 .slide img{
-  height: 22rem;
+  height: 100vh;
+  height: 100dvh;
   object-fit: cover;
 }
 
