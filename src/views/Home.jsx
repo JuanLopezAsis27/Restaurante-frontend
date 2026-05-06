@@ -29,10 +29,10 @@ const STATS = [
 
 const MENU_ITEMS = [
   {
-    name: 'Empanadas Salteñas',
+    name: 'Empanadas',
     description: 'Rellenas con carne cortada a cuchillo, papa, huevo y especias regionales. Receta de la casa.',
     price: '$1500',
-    img: 'https://hips.hearstapps.com/hmg-prod/images/restaurantes-moda-madrid-ceferino-65aa5b0e3160a.jpeg',
+    img: 'https://assets.unileversolutions.com/recipes-v2/209726.jpg',
   },
   {
     name: 'Asado a las Brasas',
