@@ -9,6 +9,11 @@ const Navbar = () => {
 
     const menuRef = useRef()
     const imgRef = useRef()
+    const checkRef = useRef()
+
+    const closeMenu = () => {
+        if (checkRef.current) checkRef.current.checked = false
+    }
 
 
 
@@ -48,16 +53,16 @@ const Navbar = () => {
         <nav className=' mb-3 py-2 flex justify-between lg:px-10 min-w-full px-4 z-50 font-bold text-md'>
             <div className='flex justify-start'>
                 <Link to='/'><img className='w-24 mr-4 rounded-full logo-nav' src="https://png.pngtree.com/png-clipart/20220604/original/pngtree-restaurant-logo-png-image_7932128.png" alt="" /></Link>
-                <input type="checkbox" id='check'/>
+                <input ref={checkRef} type="checkbox" id='check'/>
                 <label htmlFor="check" className="icons" >
                     <i className='bx bx-menu' id='menu-icon' ></i>
                     <i className='bx bx-x' id='close-icon'></i>
                 </label>
                 <ul className='md:gap-x-5 lg:gap-x-8 items-center flex-wrap nav-list  '>
-                    <Link to='/images' >Imagenes</Link>
-                    <Link to='/nosotros' >Quienes Somos</Link>
-                    <Link to='/contacto' >Contactenos</Link>
-                    <Link to='/add-reserves' className='mr-5'>Hacer una reserva</Link>
+                    <Link to='/images' onClick={closeMenu}>Imagenes</Link>
+                    <Link to='/nosotros' onClick={closeMenu}>Quienes Somos</Link>
+                    <Link to='/contacto' onClick={closeMenu}>Contactenos</Link>
+                    <Link to='/add-reserves' className='mr-5' onClick={closeMenu}>Hacer una reserva</Link>
                 </ul>
             </div>
                 <ul className='lg:gap-x-5 md:gap-x-3 items-center flex nav-login'>
